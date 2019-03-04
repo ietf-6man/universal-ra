@@ -21,7 +21,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc comments="yes" ?>
 <?rfc inline="yes" ?>
-<rfc category="exp" docName="draft-troan-6man-universal-ra-option-02"
+<rfc category="exp" docName="draft-troan-6man-universal-ra-option-latest"
      ipr="trust200902">
   <front>
     <title abbrev="">The Universal IPv6 Router Advertisement Option (experiment)</title>
