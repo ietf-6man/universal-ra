@@ -109,10 +109,10 @@
 
       <t>How to evaluate success? How many new options have been
       defined. Did expert review suffice to stop "harmful" options?
-      Was any of the options implemented and deployed? On a successful
+      Were any of the options implemented and deployed? On a successful
       experiment, the time limit of the registry will be removed and
       it's experimental status will be removed. If the experiment is
-      deamed a failure, then the registry will be removed.</t>
+      deemed a failure, then the registry will be removed.</t>
     </section>
 
     <!--  SECTION 3: DESCRIPTION                   -->
@@ -170,7 +170,7 @@
 
 	<t>The universal RA option MUST be small enough to fit within
 	a single RA packet. It then follows that a single element in
-	the dictionary can not be larger than what fits within a
+	the dictionary cannot be larger than what fits within a
 	single option. Different elements can be split across multiple
 	universal RA options (in separate RA packets).</t>
 
@@ -186,7 +186,7 @@
       requiring code changes.</t>
 
       <t>On the router side there should be an API allowing a user to
-      add a element, e.g. a JSON object or a pre-encoded CBOR string
+      add an element, e.g. a JSON object or a pre-encoded CBOR string
       to RAs sent on a given interface.</t>
 
       <t>On the host side, an API should be available allowing
