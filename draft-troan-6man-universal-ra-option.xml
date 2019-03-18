@@ -269,6 +269,7 @@
    |   prefix : tstr				     |		 |
    |   ? preference : (0..3)			     |		 |
    |   ? lifetime : uint			     |		 |
+   |   ? mtu : uint .size 2			     | [this]    |
    | }						     |		 |
    | rio = {					     |		 |
    |   routes : [+ rio_route]			     |		 |
