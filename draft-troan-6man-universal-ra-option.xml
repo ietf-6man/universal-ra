@@ -253,7 +253,7 @@
    |   ? nat64: nat64				     |		 |
    |   ? ipv6-only: bool			     |		 |
    |   ? pvd : pvd				     |		 |
-   |   ? mtu : uint .size 2			     |		 |
+   |   ? mtu : uint .size 4			     |		 |
    |   ? rio : rio				     |		 |
    | }						     |		 |
    |                                                 |           |
@@ -269,7 +269,7 @@
    |   prefix : tstr				     |		 |
    |   ? preference : (0..3)			     |		 |
    |   ? lifetime : uint			     |		 |
-   |   ? mtu : uint .size 2			     | [this]    |
+   |   ? mtu : uint .size 4			     | [this]    |
    | }						     |		 |
    | rio = {					     |		 |
    |   routes : [+ rio_route]			     |		 |
