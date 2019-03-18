@@ -39,7 +39,7 @@
       </address>
     </author>
 
-    <date year="2018" />
+    <date year="2019" />
     <area>Cisco</area>
     <workgroup></workgroup>
 
@@ -76,7 +76,7 @@
       fate-sharing in DHCP, DHCP doesn't deal with multiple sources of
       information, or make it more difficult to change information
       independent of the lifetimes, RA cannot be used to configure
-      different information to different clients and son on. And of
+      different information to different clients and so on. And of
       course some options are only available in RAs and some options
       are only available in DHCP.</t>
 
@@ -97,7 +97,7 @@
     <section title="The Experiment">
       <t>This document specifies a new "self-describing" universal RA
       option. Currently new configuration option requires "standards
-      action".  The purpose of the experiment is two-fold. What is the
+      action".  The purpose of the experiment is two-fold. What are the
       implications of an opaque RA option that should not require any
       code changes for new elements within the option? And what
       happens when change control is relaxed? The proposal is that no
@@ -126,7 +126,7 @@
      0                   1                   2                   3
      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    |     Type      |    Length     |   Data ...                  
+    |     Type      |    Length     |   Data ...
     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
             ]]></artwork>
@@ -190,8 +190,14 @@
       to RAs sent on a given interface.</t>
 
       <t>On the host side, an API should be available allowing
-      applications to subscribe to received RA elements, based on a
-      dictionary key.</t>
+      applications to subscribe to received RA elements along with meta-data
+      about the RA (e.g. source and destination IP addresses, receive
+      timestamp, etc.). It should be possible to subscribe to receive the
+      whole of an RA or any portion, e.g. based on a dictionary key.</t>
+
+      <t>The contents of any elements that are not recognized, either in whole
+      or in part, by the receiving host MUST be ignored and the remainder of
+      option's contents processed as normal.</t>
     </section>
 
     <section title="Implementation Status">
@@ -205,7 +211,7 @@
     </section>
 
     <section title="Security Considerations">
-      <t>Unless there is a secutity relationship between the host and
+      <t>Unless there is a security relationship between the host and
       the router (e.g. SEND), and even then, the consumer of
       configuration information can put no trust in the information
       received.</t>
@@ -247,7 +253,7 @@
    |   ? nat64: nat64				     |		 |
    |   ? ipv6-only: bool			     |		 |
    |   ? pvd : pvd				     |		 |
-   |   ? mtu : uint				     |		 |
+   |   ? mtu : uint .size 2			     |		 |
    |   ? rio : rio				     |		 |
    | }						     |		 |
    |                                                 |           |
